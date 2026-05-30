@@ -61,6 +61,14 @@ documents (`A_12`, `A_16`) are identical, so the corpus holds 60 documents but 5
 texts. Scenario 4 has only ~400 distinct word types, so its Cosine-Delta profile is
 necessarily capped at 393 MFW rather than 500.
 
+### Supplementary: regenerated Scenario 4
+
+`Corpus/Scenario 4_regenerated/` is a non-degenerate, distinct-text version of Scenario 4
+(60 unique texts) produced by `analysis/src/generate_scenario.py`. It is **supplementary**
+and not part of the five-condition pipeline reported in the paper. The block-architecture
+recipe, the exact regeneration command, and the (non-linear) tipping-point finding are
+documented in [`docs/scenario4_regeneration.md`](docs/scenario4_regeneration.md).
+
 ## Reproducing the results
 
 There are two paths. The repository already ships every precomputed artifact, so you can
