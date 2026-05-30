@@ -1,0 +1,49 @@
+=== TABLE 1 ===
+Scenario | Intra-overlap | Inter-overlap | Unique texts | Vocab size | Mean words / doc | MFW used
+1 | 0.90 | 0.10 | 60 | 1067 | 175 | 500
+2 | 0.70 | 0.30 | 60 | 2057 | 227 | 500
+3 | 0.50 | 0.50 | 60 | 1553 | 259 | 500
+4 | 0.30 | 0.70 | 3 | 403 | 292 | 393
+5 | 0.10 | 0.90 | 60 | 2655 | 309 | 500
+
+=== TABLE 2 ===
+Scenario | Within-author Δ | Between-author Δ | Separation ratio | Role in the design
+1 | 0.405 | 1.307 | 3.22 | High-separation baseline
+2 | 0.427 | 1.296 | 3.04 | High separation maintained
+3 | 0.893 | 1.076 | 1.20 | Balanced, discriminative condition
+4 | 0.000 | 1.500 | ∞ | Identical-text control
+5 | 0.940 | 1.053 | 1.12 | Topic confound, attribution collapse
+
+=== TABLE 3 ===
+Scenario | Representation | 1NN-LOO acc. | ARI (k=3) | Silhouette
+1 | Cosine Delta | 1.000 | 1.000 | 0.675
+1 | OpenAI | 1.000 | 1.000 | 0.918
+1 | spaCy | 1.000 | 1.000 | 0.934
+2 | Cosine Delta | 1.000 | 1.000 | 0.656
+2 | OpenAI | 1.000 | 1.000 | 0.886
+2 | spaCy | 1.000 | 1.000 | 0.891
+3 | Cosine Delta | 0.833 | 0.517 | 0.127
+3 | OpenAI | 0.917 | 0.550 | 0.390
+3 | spaCy | 0.867 | 0.405 | 0.308
+4 | Cosine Delta | 1.000 | 1.000 | 1.000
+4 | OpenAI | 1.000 | 1.000 | 1.000
+4 | spaCy | 1.000 | 1.000 | 1.000
+5 | Cosine Delta | 0.000 | -0.035 | 0.101
+5 | OpenAI | 0.000 | -0.027 | 0.022
+
+=== TABLE 4 ===
+Sc. | Contrast | Acc. A | Acc. B | Δ acc. [95% CI] | p (perm.) | p (exact)
+3 | OpenAI vs spaCy | 0.917 | 0.867 | 0.050 [-0.017, 0.117] | 0.378 | 0.375
+3 | OpenAI vs Delta | 0.917 | 0.833 | 0.083 [-0.017, 0.200] | 0.227 | 0.227
+3 | spaCy vs Delta | 0.867 | 0.833 | 0.033 [-0.083, 0.150] | 0.791 | 0.791
+5 | OpenAI vs chance | 0.000 | 0.333 | -0.333 | <0.001 | 2.7e-11
+5 | spaCy vs chance | 0.000 | 0.333 | -0.333 | <0.001 | 2.7e-11
+5 | Delta vs chance | 0.000 | 0.333 | -0.333 | <0.001 | 2.7e-11
+
+=== TABLE 5 ===
+Scenario | Delta ~ OpenAI | Delta ~ spaCy | OpenAI ~ spaCy
+1 | 0.938 | 0.955 | 0.988
+2 | 0.961 | 0.947 | 0.982
+3 | 0.556 | 0.500 | 0.799
+4 | 0.968 | 0.927 | 0.990
+5 | 0.690 | 0.598 | 0.724

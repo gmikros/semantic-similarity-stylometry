@@ -1,0 +1,18 @@
+R dependencies for the Cosine-Delta stylometry step (analysis/R/stylo_pipeline.R)
+================================================================================
+
+Tested with R 4.3.x.
+
+Required packages (CRAN):
+  - stylo       # Most-Frequent-Word profiles, Cosine Delta ("wurzburg"), distance tables
+  - networkD3   # required by stylo.network() for the bootstrap consensus network export
+
+Install from an R session:
+
+    install.packages(c("stylo", "networkD3"), repos = "https://cloud.r-project.org")
+
+Notes
+-----
+- `Rscript` must be available on PATH to run the pipeline via analysis/src/run_all.py.
+- The R step is only needed for full regeneration of the Cosine-Delta artifacts.
+  Precomputed distance/frequency tables are shipped in Data/ and analysis/output/.

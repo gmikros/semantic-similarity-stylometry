@@ -1,0 +1,6 @@
+scenario,n_docs,n_unique_texts,total_words,vocab_size,is_identical_control
+1,60,60,10504,1067,False
+2,60,60,13597,2057,False
+3,60,59,15569,1553,False
+4,60,3,17520,403,True
+5,60,60,18539,2655,False

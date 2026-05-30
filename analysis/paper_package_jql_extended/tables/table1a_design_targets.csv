@@ -1,0 +1,6 @@
+scenario,target_intra_overlap,target_inter_overlap
+1,0.9,0.1
+2,0.7,0.3
+3,0.5,0.5
+4,0.3,0.7
+5,0.1,0.9

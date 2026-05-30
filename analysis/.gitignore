@@ -1,0 +1,6 @@
+# Local environment only. Generated artifacts under output/ and the paper packages
+# ARE tracked in this repository for full reproducibility.
+.venv/
+__pycache__/
+*.pyc
+.env

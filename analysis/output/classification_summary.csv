@@ -1,0 +1,16 @@
+scenario,representation,n_docs,n_groups,acc_1nn_loo,ari_3cluster
+1,delta,60,3,1.0,1.0
+1,openai,60,3,1.0,1.0
+1,spacy,60,3,1.0,1.0
+2,delta,60,3,1.0,1.0
+2,openai,60,3,1.0,1.0
+2,spacy,60,3,1.0,1.0
+3,delta,60,3,0.8333,0.517
+3,openai,60,3,0.9167,0.5497
+3,spacy,60,3,0.8667,0.4051
+4,delta,60,3,1.0,1.0
+4,openai,60,3,1.0,1.0
+4,spacy,60,3,1.0,1.0
+5,delta,60,3,0.0,-0.0345
+5,openai,60,3,0.0,-0.0271
+5,spacy,60,3,0.0,-0.0333

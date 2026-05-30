@@ -1,0 +1,20 @@
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Secrets / environment
+.env
+*.key
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+
+# Scratch
+tmp_*.py
+tmp/

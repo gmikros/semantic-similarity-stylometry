@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite both the paper and this repository."
+title: "Investigating the Impact of Semantic Similarity on Stylometric Attribution: Reproducibility Package"
+abstract: >-
+  Controlled artificial corpora, analysis code, and results comparing Cosine-Delta
+  stylometry with OpenAI and spaCy embeddings for authorship attribution under varying
+  semantic similarity between authors.
+type: software
+authors:
+  - family-names: Mikros
+    given-names: George
+  - family-names: Čech
+    given-names: Radek
+  - family-names: Mutlová
+    given-names: Petra
+keywords:
+  - authorship attribution
+  - stylometry
+  - Cosine Delta
+  - word embeddings
+  - topic confound
+  - controlled artificial corpora
+license: MIT
+preferred-citation:
+  type: article
+  title: >-
+    Investigating the Impact of Semantic Similarity on Stylometric Attribution Using
+    Controlled Artificial Texts and Delta Distances
+  authors:
+    - family-names: Mikros
+      given-names: George
+    - family-names: Čech
+      given-names: Radek
+    - family-names: Mutlová
+      given-names: Petra
+  journal: "Journal of Quantitative Linguistics"
+  year: 2026
+  notes: "Manuscript (submitted)."

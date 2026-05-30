@@ -1,0 +1,6 @@
+scenario,intra_overlap,inter_overlap,unique_texts,vocab_size,mean_words_per_doc,mfw_used
+1,0.9,0.1,60,1067,175,500
+2,0.7,0.3,60,2057,227,500
+3,0.5,0.5,59,1553,259,500
+4,0.3,0.7,3,403,292,393
+5,0.1,0.9,60,2655,309,500
