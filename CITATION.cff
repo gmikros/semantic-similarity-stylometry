@@ -13,13 +13,21 @@ authors:
     given-names: Radek
   - family-names: Mutlová
     given-names: Petra
+  - family-names: Mačutek
+    given-names: Ján
 keywords:
   - authorship attribution
   - stylometry
   - Cosine Delta
+  - Burrows Delta
   - word embeddings
+  - OpenAI embeddings
+  - spaCy
   - topic confound
+  - cross-topic attribution
+  - quantitative linguistics
   - controlled artificial corpora
+  - reproducible research
 license: MIT
 preferred-citation:
   type: article
@@ -33,6 +41,8 @@ preferred-citation:
       given-names: Radek
     - family-names: Mutlová
       given-names: Petra
+    - family-names: Mačutek
+      given-names: Ján
   journal: "Journal of Quantitative Linguistics"
   year: 2026
   notes: "Manuscript (submitted)."

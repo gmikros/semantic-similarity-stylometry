@@ -1,10 +1,29 @@
 # Investigating the Impact of Semantic Similarity on Stylometric Attribution
 
+[![Code license: MIT](https://img.shields.io/badge/code%20license-MIT-blue.svg)](LICENSE)
+[![Data license: CC BY 4.0](https://img.shields.io/badge/data%20license-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA)
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
+[![Made with stylo](https://img.shields.io/badge/stylometry-stylo%20(R)-success.svg)](https://github.com/computationalstylistics/stylo)
+
+> Controlled-corpus benchmark comparing classical **Cosine-Delta** stylometry with
+> **OpenAI** and **spaCy** embeddings for authorship attribution under systematically
+> varied semantic similarity between authors.
+
 Reproducibility package for:
 
-> Mikros, G., Čech, R., & Mutlová, P. (2026). *Investigating the Impact of Semantic
-> Similarity on Stylometric Attribution Using Controlled Artificial Texts and Delta
-> Distances.* (Manuscript, submitted to the *Journal of Quantitative Linguistics*.)
+> Mikros, G., Čech, R., Mutlová, P., & Mačutek, J. (2026). *Investigating the Impact of
+> Semantic Similarity on Stylometric Attribution Using Controlled Artificial Texts and
+> Delta Distances.* (Manuscript, submitted to the *Journal of Quantitative Linguistics*.)
+
+## Contents
+
+- [Headline result](#headline-result)
+- [Repository layout](#repository-layout)
+- [The five conditions (+ control)](#the-five-conditions--control)
+- [Reproducing the results](#reproducing-the-results)
+- [Methods in brief](#methods-in-brief)
+- [Citing](#citing)
+- [Licensing](#licensing)
 
 This repository contains the controlled artificial corpora, the analysis code, and the
 exact tables and figures behind the paper. It compares classical distance-based
