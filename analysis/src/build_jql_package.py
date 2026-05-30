@@ -256,7 +256,7 @@ def write_jql_draft(overview: pd.DataFrame, perf: pd.DataFrame, sig: pd.DataFram
     lines = f"""# Manuscript Draft (Journal of Quantitative Linguistics)
 
 ## Title
-Comparing Cosine-Delta Stylometry and Neural Embeddings in Controlled Authorship-Attribution Scenarios
+Investigating the Impact of Semantic Similarity on Stylometric Attribution: Delta Distances versus Neural Embeddings in Controlled Artificial Texts
 
 ## Abstract
 This study evaluates classical stylometry (Cosine Delta) against dense text embeddings (OpenAI `text-embedding-3-small` and spaCy `en_core_web_lg`) on five controlled authorship-attribution scenarios (N = 60 texts per scenario, three author classes). Evaluation combines leave-one-out 1-nearest-neighbour attribution and three-cluster recovery (Adjusted Rand Index). In the principal distinct-text setting (Scenario 3), OpenAI embeddings outperform both spaCy and Cosine Delta (1NN: {s3['openai']:.2f} vs {s3['spacy']:.2f} vs {s3['delta']:.2f}). By contrast, all methods collapse in Scenario 5 (all 1NN = {s5['openai']:.2f}), indicating a topic-driven confound where nearest-neighbour structure no longer reflects author labels. The package provides reproducible scripts, statistical tests, and publication-ready tables/figures.

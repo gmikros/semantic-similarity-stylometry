@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software or data, please cite both the paper and this repository."
-title: "Investigating the Impact of Semantic Similarity on Stylometric Attribution: Reproducibility Package"
+title: "Investigating the Impact of Semantic Similarity on Stylometric Attribution: Delta Distances versus Neural Embeddings in Controlled Artificial Texts (Reproducibility Package)"
 abstract: >-
   Controlled artificial corpora, analysis code, and results comparing Cosine-Delta
   stylometry with OpenAI and spaCy embeddings for authorship attribution under varying
@@ -32,8 +32,8 @@ license: MIT
 preferred-citation:
   type: article
   title: >-
-    Investigating the Impact of Semantic Similarity on Stylometric Attribution Using
-    Controlled Artificial Texts and Delta Distances
+    Investigating the Impact of Semantic Similarity on Stylometric Attribution: Delta
+    Distances versus Neural Embeddings in Controlled Artificial Texts
   authors:
     - family-names: Mikros
       given-names: George

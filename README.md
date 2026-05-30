@@ -1,4 +1,4 @@
-# Investigating the Impact of Semantic Similarity on Stylometric Attribution
+# Investigating the Impact of Semantic Similarity on Stylometric Attribution: Delta Distances versus Neural Embeddings in Controlled Artificial Texts
 
 [![Code license: MIT](https://img.shields.io/badge/code%20license-MIT-blue.svg)](LICENSE)
 [![Data license: CC BY 4.0](https://img.shields.io/badge/data%20license-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA)
@@ -12,8 +12,9 @@
 Reproducibility package for:
 
 > Mikros, G., Čech, R., Mutlová, P., & Mačutek, J. (2026). *Investigating the Impact of
-> Semantic Similarity on Stylometric Attribution Using Controlled Artificial Texts and
-> Delta Distances.* (Manuscript, submitted to the *Journal of Quantitative Linguistics*.)
+> Semantic Similarity on Stylometric Attribution: Delta Distances versus Neural Embeddings
+> in Controlled Artificial Texts.* (Manuscript, submitted to the *Journal of Quantitative
+> Linguistics*.)
 
 ## Contents
 
