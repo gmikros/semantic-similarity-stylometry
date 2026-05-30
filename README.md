@@ -57,6 +57,8 @@ Delta nonetheless retains recoverable author structure beyond the nearest neighb
 │   ├── paper_package_jql_extended/   # extended tables/figures (kNN, silhouette, Mantel)
 │   └── requirements.txt        # Python dependencies
 ├── paper/                      # manuscript (Methods/Results) and abstract
+├── docs/                       # scenario regeneration + LLM prompt templates
+├── tools/                      # corpus generation + (provenance) authoring helpers
 ├── environment/                # R dependency notes
 ├── reproduce.ps1 / reproduce.sh  # convenience end-to-end driver
 ├── LICENSE                     # MIT (code)

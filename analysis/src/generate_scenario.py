@@ -13,15 +13,21 @@ The split is set by the design ratio (intra, inter), intra + inter = 1:
       len(author_block) = round(intra * L)
       len(topic_block)  = round(inter * L)
 
-This reproduces the construction recovered from the surviving scenarios
-(Sc1 = pure author block, intra 0.9; Sc5 = big topic block, intra 0.1).
-Blocks are harvested verbatim from the existing corpus so the prose stays
-natural and LLM-generated; only the split ratio changes between scenarios.
+Blocks may be (a) harvested verbatim from the existing corpus (default), or
+(b) read from a --blocks-dir produced by an LLM (see tools/generate_blocks_llm.py
+and docs/prompt_templates.md). A blocks dir must contain:
+      author_A.txt, author_B.txt, author_C.txt
+      topic_1.txt ... topic_20.txt
 
-Example (regenerate Scenario 4 at intra 0.3 / inter 0.7):
+Examples:
+    # harvest from existing scenarios (Sc1 = author block, Sc5 = topic block)
     python generate_scenario.py --intra 0.3 --inter 0.7 --length 300 \
            --topic-src 5 --author-src 3 --author-mode voice \
            --out "../../Corpus/Scenario 4_regenerated"
+
+    # assemble from fresh LLM-generated blocks
+    python generate_scenario.py --intra 0.5 --inter 0.5 --length 300 \
+           --blocks-dir ../../blocks/scenario_new --out "../../Corpus/Scenario new"
 """
 import argparse, os, re
 
@@ -90,6 +96,25 @@ def harvest_author_blocks(src_scenario=1, mode="prefix"):
         raise ValueError("unknown author mode: %s" % mode)
     return blocks
 
+def load_blocks_dir(d, n_topics=20):
+    """Load pre-generated blocks (e.g. from tools/generate_blocks_llm.py).
+
+    Expects author_A/B/C.txt and topic_1..N.txt as plain UTF-8 text files.
+    """
+    topics = {}
+    for i in range(1, n_topics + 1):
+        p = os.path.join(d, "topic_%d.txt" % i)
+        if not os.path.exists(p):
+            raise FileNotFoundError("missing topic block: %s" % p)
+        topics[i] = read(p).split()
+    authors = {}
+    for g in "ABC":
+        p = os.path.join(d, "author_%s.txt" % g)
+        if not os.path.exists(p):
+            raise FileNotFoundError("missing author block: %s" % p)
+        authors[g] = read(p).split()
+    return topics, authors
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--intra", type=float, required=True)
@@ -98,14 +123,21 @@ def main():
     ap.add_argument("--topic-src", type=int, default=5)
     ap.add_argument("--author-src", type=int, default=3)
     ap.add_argument("--author-mode", choices=["prefix", "voice"], default="voice")
+    ap.add_argument("--blocks-dir", default=None,
+                    help="Directory of pre-generated author_*/topic_* blocks. "
+                         "If set, blocks are read from here instead of harvested.")
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
 
     L = args.length
     n_author = round(args.intra * L)
     n_topic = round(args.inter * L)
-    topics = harvest_topic_blocks(args.topic_src)
-    authors = harvest_author_blocks(args.author_src, args.author_mode)
+
+    if args.blocks_dir:
+        topics, authors = load_blocks_dir(args.blocks_dir)
+    else:
+        topics = harvest_topic_blocks(args.topic_src)
+        authors = harvest_author_blocks(args.author_src, args.author_mode)
 
     os.makedirs(args.out, exist_ok=True)
     written = 0
